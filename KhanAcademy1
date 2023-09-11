@@ -1,0 +1,21 @@
+/*Data for the table below was pulled from nyxcosmetics.com*/
+
+CREATE TABLE nyxbeautystore (ID INTEGER PRIMARY KEY, Name TEXT, Category TEXT, Color_Name TEXT, Price INTEGER);
+INSERT INTO nyxbeautystore VALUES (1, "Worth The Hype Waterproof Mascara", "Eyes", "Black", 9);
+INSERT INTO nyxbeautystore VALUES (2, "On The Rise Volume Liftscara", "Eyes", "Black", 12);
+INSERT INTO nyxbeautystore VALUES (3, "On The Rise Lash Booster", "Eyes", "Black", 12);
+INSERT INTO nyxbeautystore VALUES (4, "Jumbo Eye Pencil", "Eyes", "Milk", 6);
+INSERT INTO nyxbeautystore VALUES (5, "Vivid Brights Colored Liqued Eyeliner", "Eyes", "Don't Pink Twice", 9);
+INSERT INTO nyxbeautystore VALUES (6, "Fat Oil Lip Drip", "Lips", "Follow Back", 9);
+INSERT INTO nyxbeautystore VALUES (7, "Pencil Lip Primer", "Lips", "Deep Nude", 7);
+INSERT INTO nyxbeautystore VALUES (8, "This Is Juice Gloss", "Lips", "Strawberry Flex", 8);
+INSERT INTO nyxbeautystore VALUES (9, "Soft Matte Lip Cream", "Lips", "Sao Paulo", 7);
+INSERT INTO nyxbeautystore VALUES (10, "Suede Matte Lip Liner", "Lips", "Copenhagen", 5);
+INSERT INTO nyxbeautystore VALUES (11, "Studio Perfect Primer", "Face", "Clear", 14);
+INSERT INTO nyxbeautystore VALUES (12, "Can't Stop Won't Stop Foundation", "Face", "Soft Beige", 15);
+INSERT INTO nyxbeautystore VALUES (13, "HD Photogenic Liquid Concealer", "Face", "Porcelain", 6);
+INSERT INTO nyxbeautystore VALUES (14, "Wonder Stick Blush", "Face", "Coral and Deep Peach", 14); 
+INSERT INTO nyxbeautystore VALUES (15, "Jumbo Multi-Use Highlighter Stick", "Face", "Coconut Cake", 8);
+SELECT * FROM nyxbeautystore ORDER BY price;
+SELECT category, SUM(price) FROM nyxbeautystore GROUP BY category;
+SELECT category,price FROM nyxbeautystore WHERE price < 10;
